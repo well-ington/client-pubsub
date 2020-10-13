@@ -4,4 +4,6 @@ export type TsubscriptionMessage = {
   date: string
   username: string
   avatar: string
+  level: string
+  photo?: string
 }
