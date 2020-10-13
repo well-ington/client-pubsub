@@ -25,13 +25,13 @@ const Login: React.FC<TLoginInjectedProps> = ({validation, authentication}) => {
       ...state,
       emailError: validation.validate('email', state.email),
       passwordError: validation.validate('password', state.password)
-    })    
+    })
   }, [state.email, state.password])
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
     event.preventDefault()
     try {
-       if (state.isLoading || state.emailError || state.passwordError) {
+      if (state.isLoading || state.emailError || state.passwordError) {
         return
       }
       setState({ ...state, isLoading: true })
@@ -39,11 +39,13 @@ const Login: React.FC<TLoginInjectedProps> = ({validation, authentication}) => {
       localStorage.setItem('accessToken', account.accessToken)
       history.replace('/')
     } catch(error) {
+      
       setState({ 
         ...state, 
         isLoading: false,
         mainError: error.message
         })
+
     }   
   }
 
