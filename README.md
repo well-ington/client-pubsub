@@ -1,7 +1,13 @@
 # Client-side Authentication Client
 
+## How to install
+1 - Fork this project
+2 - Run `npm i` in the root folder
+3 - Run `npm start`
 
-## Scripts:
+The project will run on `localhost:8080`. You can access the `Home` page in `localhost:8080` and the login page at `localhost:8080/login`.
+
+## Scripts
 
 ### npm start
 Runs webpack to generate a bundle.js file and load the application at localhost:8080. Any change made to the files inside `src` directory will refresh the page.
