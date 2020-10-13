@@ -11,7 +11,7 @@ describe('EmailValidation test', () => {
     const field = faker.database.column()
     const sut = makeSut(field)
 
-    const error = sut.validate({[field]: faker.random.word()})
+    const error = sut.validate(faker.random.word())
 
     expect(error).toEqual(new InvalidFieldError())
   })
@@ -20,7 +20,7 @@ describe('EmailValidation test', () => {
     const field = faker.database.column()
     const sut = makeSut(field)
 
-    const error = sut.validate({[field]: faker.internet.email()})
+    const error = sut.validate(faker.internet.email())
 
     expect(error).toBeFalsy()
   })
@@ -29,7 +29,7 @@ describe('EmailValidation test', () => {
     const field = faker.database.column()
     const sut = makeSut(field)
 
-    const error = sut.validate({[field]: ''})
+    const error = sut.validate('')
 
     expect(error).toBeFalsy()
   })
