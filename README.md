@@ -1,9 +1,10 @@
 # Client-side Authentication Client
 
 ## How to install
-1 - Fork this project
-2 - Run `npm i` in the root folder
-3 - Run `npm start`
+
+- Fork this project
+- Run `npm i` in the root folder
+- Run `npm start`
 
 The project will run on `localhost:8080`. You can access the `Home` page in `localhost:8080` and the login page at `localhost:8080/login`.
 
