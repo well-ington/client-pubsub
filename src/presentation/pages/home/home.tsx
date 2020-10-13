@@ -35,7 +35,7 @@ type StateProps = {
 
 const Home: React.FC = () => {
   const [state, setState] = useState<StateProps>({
-    level: ['A','B','C','D'][Math.floor(Math.random() * 4)]
+    level: 'B'
   })
   
   const filtered = fakeData.filter((element) => element.level >= state.level)
