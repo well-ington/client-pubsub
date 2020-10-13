@@ -10,7 +10,7 @@ describe('RequiredFieldValidation', () => {
     const field = faker.database.column()
     const sut = makeSut(field)
 
-    const error = sut.validate({ [field]: '' })
+    const error = sut.validate('')
 
     expect(error).toEqual(new RequiredFieldError())
   })
@@ -19,7 +19,7 @@ describe('RequiredFieldValidation', () => {
     const field = faker.database.column()
     const sut = makeSut(field)
 
-    const error = sut.validate({ [field]: faker.random.word() })
+    const error = sut.validate(faker.random.word())
 
     expect(error).toBeFalsy()
   })
